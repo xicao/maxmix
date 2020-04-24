@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <b-carousel>
+      <b-carousel-item v-for="(carousel, i) in carousels" :key="i">
+        <section :class="`hero is-medium is-${carousel.color}`">
+          <div class="hero-body has-text-centered">
+            <h1 class="title">{{ carousel.text }}</h1>
+          </div>
+        </section>
+      </b-carousel-item>
+    </b-carousel>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  name: "Home",
+  computed: {
+    carousels() {
+      return [
+        { text: "Slide 1", color: "primary" },
+        { text: "Slide 2", color: "info" },
+        { text: "Slide 3", color: "success" },
+        { text: "Slide 4", color: "warning" },
+        { text: "Slide 5", color: "danger" },
+      ];
+    },
+  },
+};
 </script>
