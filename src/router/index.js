@@ -7,25 +7,25 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    name: "home",
+    component: Home,
   },
   {
     path: "/gallery",
     name: "gallery",
-    component: () => import("../views/Gallery.vue")
+    component: () => import("../views/Gallery.vue"),
   },
   {
     path: "/locations",
     name: "locations",
-    component: () => import("../views/Locations.vue")
-  }
+    component: () => import("../views/Locations.vue"),
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;

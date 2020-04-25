@@ -1,5 +1,6 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import Vue from "vue";
+
 // internal icons
 import {
   faCheck,

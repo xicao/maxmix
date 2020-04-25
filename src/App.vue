@@ -1,17 +1,18 @@
 <template>
   <div id="app">
+    <section class="brand">
+      <img src="@/assets/brand.png" alt="logo" />
+    </section>
     <b-navbar>
-      <template slot="brand">
-        <b-navbar-item tag="router-link" :to="{ path: '/' }">
-          <img src="@/assets/logo.webp" alt="logo" />
+      <template slot="end">
+        <b-navbar-item tag="router-link" :to="{ name: 'home' }">
+          home
         </b-navbar-item>
-      </template>
-      <template slot="start">
         <b-navbar-item tag="router-link" :to="{ name: 'gallery' }">
-          Gallery
+          gallery
         </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ name: 'locations' }">
-          Locations
+          locations
         </b-navbar-item>
       </template>
     </b-navbar>
@@ -25,7 +26,35 @@
 </template>
 
 <style lang="scss">
+$brand-primary: "#EA4C55";
+
 #app {
-  min-height: 100vh;
+  .brand {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    img {
+      width: 300px;
+    }
+  }
+
+  .navbar-start {
+    display: none;
+  }
+
+  .navbar-end {
+    margin: auto;
+  }
+
+  h1 {
+    border-top: 5px solid #ea4c55;
+    display: inline-block;
+    line-height: 1.5;
+  }
+
+  .footer {
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
 }
 </style>
