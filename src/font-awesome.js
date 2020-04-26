@@ -17,6 +17,8 @@ import {
   faCaretDown,
   faCaretUp,
   faUpload,
+  faSortUp,
+  faSortDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -34,6 +36,8 @@ library.add(
   faEyeSlash,
   faCaretDown,
   faCaretUp,
-  faUpload
+  faUpload,
+  faSortUp,
+  faSortDown
 );
 Vue.component("vue-fontawesome", FontAwesomeIcon);
