@@ -32,26 +32,29 @@
 </template>
 
 <script>
+import image from "@/mixins/image";
+
 export default {
   name: "Home",
 
+  mixins: [image],
+
   computed: {
-    path: () => process.env.BASE_URL,
     carousel() {
       return {
         arrow: true,
         items: [
           {
-            image: `${this.path}assets/image0.jpeg`,
+            image: this.getImgUrl(0),
           },
           {
-            image: `${this.path}assets/image1.jpeg`,
+            image: this.getImgUrl(1),
           },
           {
-            image: `${this.path}assets/image2.jpeg`,
+            image: this.getImgUrl(2),
           },
           {
-            image: `${this.path}assets/image3.jpeg`,
+            image: this.getImgUrl(3),
           },
         ],
       };

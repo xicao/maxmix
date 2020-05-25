@@ -39,7 +39,11 @@
 </template>
 
 <script>
+import image from "@/mixins/image";
+
 export default {
+  mixins: [image],
+
   data: () => ({
     model: {
       active: false,
@@ -48,7 +52,6 @@ export default {
   }),
 
   computed: {
-    path: () => process.env.BASE_URL,
     images() {
       return [
         {
@@ -78,11 +81,8 @@ export default {
       ];
     },
   },
-  methods: {
-    getImgUrl(value) {
-      return `${this.path}assets/image${value}.jpeg`;
-    },
 
+  methods: {
     showImageModel(image) {
       this.model.active = true;
       this.model.image = image;
