@@ -49,7 +49,13 @@ $brand-primary: "#EA4C55";
     align-content: center;
     justify-content: center;
     img {
-      width: 300px;
+      width: 200px;
+
+      @media screen and (max-width: 735px) {
+        & {
+          width: 100px;
+        }
+      }
     }
   }
 
