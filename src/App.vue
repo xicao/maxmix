@@ -45,10 +45,9 @@ $brand-primary: "#EA4C55";
   min-height: 100vh;
 
   .brand {
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    text-align: center;
     img {
+      height: auto;
       width: 200px;
 
       @media screen and (max-width: 735px) {
