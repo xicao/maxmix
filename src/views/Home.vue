@@ -4,7 +4,7 @@
       <b-carousel-item v-for="(carousel, i) in carousel.items" :key="i">
         <section class="hero">
           <span class="image">
-            <img :src="getImgUrl(i)" />
+            <img :src="carousel.image" />
           </span>
         </section>
       </b-carousel-item>
@@ -13,53 +13,17 @@
     <section class="section">
       <div class="container">
         <div class="column is-12 has-text-centered">
-          <h1 class="title section-title">About Us</h1>
+          <h1 class="title section-title is-uppercase">About Us</h1>
         </div>
         <div class="columns is-multiline is-centered">
           <div class="column is-6 has-vertically-aligned-content">
             <p class="is-larger">
-              <strong>
-                Showcase is a modern, beautiful personal website template to
-                showcase who you are, as well as projects you've worked on in
-                the past.
-              </strong>
+              <strong>maxmix home & gifts</strong> started in 2009 South
+              Australia. We are focus on gifts and homewares for different ages.
+              If you’re looking to buy homewares, gifts, souvenirs, and
+              novelties that are affordable and good quality <br />
+              —— we can help.
             </p>
-            <br />
-            <p>
-              Showcase was built from the ground up with Bulma to be fast and
-              responsive out of the box with all source files well documented
-              for easy to customization. The Showcase template gives you a
-              personal space to share what you are all about as a creative
-              designer, developer, photographer, and more!
-            </p>
-            <br />
-            <div class="is-divider"></div>
-            <div class="columns about-links">
-              <div class="column">
-                <p class="heading">
-                  <strong>Give me a ring</strong>
-                </p>
-                <p class="subheading">
-                  123-456-7890
-                </p>
-              </div>
-              <div class="column">
-                <p class="heading">
-                  <strong>Email Me</strong>
-                </p>
-                <p class="subheading">
-                  hello@example.com
-                </p>
-              </div>
-              <div class="column">
-                <p class="heading">
-                  <strong>View my portfolio</strong>
-                </p>
-                <p class="subheading">
-                  example.com
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -72,24 +36,39 @@ export default {
   name: "Home",
 
   computed: {
+    path: () => process.env.BASE_URL,
     carousel() {
       return {
         arrow: true,
         items: [
-          { text: "Slide 1", color: "primary" },
-          { text: "Slide 2", color: "info" },
-          { text: "Slide 3", color: "success" },
-          { text: "Slide 4", color: "warning" },
-          { text: "Slide 5", color: "danger" },
+          {
+            image: `${this.path}assets/image0.jpeg`,
+          },
+          {
+            image: `${this.path}assets/image1.jpeg`,
+          },
+          {
+            image: `${this.path}assets/image2.jpeg`,
+          },
+          {
+            image: `${this.path}assets/image3.jpeg`,
+          },
         ],
       };
     },
   },
-
-  methods: {
-    getImgUrl(value) {
-      return `https://picsum.photos/id/43${value}/1230/500`;
-    },
-  },
 };
 </script>
+
+<style lang="scss" scoped>
+.home {
+  .carousel {
+    .carousel-items {
+      img {
+        max-height: 500px !important;
+        object-fit: cover;
+      }
+    }
+  }
+}
+</style>

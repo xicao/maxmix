@@ -3,7 +3,7 @@
     <section class="hero has-text-centered">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">
+          <h1 class="title is-uppercase">
             Gallery
           </h1>
         </div>
@@ -48,6 +48,7 @@ export default {
   }),
 
   computed: {
+    path: () => process.env.BASE_URL,
     images() {
       return [
         {
@@ -68,12 +69,18 @@ export default {
         {
           image: this.getImgUrl(5),
         },
+        {
+          image: this.getImgUrl(6),
+        },
+        {
+          image: this.getImgUrl(7),
+        },
       ];
     },
   },
   methods: {
     getImgUrl(value) {
-      return `https://picsum.photos/id/43${value}/800/600`;
+      return `${this.path}assets/image${value}.jpeg`;
     },
 
     showImageModel(image) {
@@ -86,6 +93,9 @@ export default {
 
 <style lang="scss">
 .gallery {
+  .image.is-4by3 img {
+    height: inherit !important;
+  }
   .card {
     box-shadow: none;
   }
@@ -94,6 +104,8 @@ export default {
       transition: all 0.1s ease-in-out;
       border-radius: 5px;
       box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
+      max-height: 250px !important;
+      object-fit: cover;
     }
   }
 }

@@ -5,14 +5,27 @@
     </section>
     <b-navbar>
       <template slot="end">
-        <b-navbar-item tag="router-link" :to="{ name: 'home' }">
-          home
+        <b-navbar-item
+          tag="router-link"
+          exact
+          :to="{ name: 'home' }"
+          class="has-text-weight-semibold"
+        >
+          HOME
         </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ name: 'gallery' }">
-          gallery
+        <b-navbar-item
+          tag="router-link"
+          :to="{ name: 'gallery' }"
+          class="has-text-weight-semibold"
+        >
+          GALLERY
         </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ name: 'locations' }">
-          locations
+        <b-navbar-item
+          tag="router-link"
+          :to="{ name: 'locations' }"
+          class="has-text-weight-semibold"
+        >
+          LOCATIONS
         </b-navbar-item>
       </template>
     </b-navbar>
@@ -29,6 +42,8 @@
 $brand-primary: "#EA4C55";
 
 #app {
+  min-height: 100vh;
+
   .brand {
     display: flex;
     align-content: center;
