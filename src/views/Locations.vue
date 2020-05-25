@@ -52,9 +52,12 @@
 
 <script>
 export default {
+  name: "Locations",
+
   data: () => ({
     isOpen: 0,
   }),
+
   computed: {
     locations() {
       return [

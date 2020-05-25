@@ -42,6 +42,8 @@
 import image from "@/mixins/image";
 
 export default {
+  name: "Gallery",
+
   mixins: [image],
 
   data: () => ({
