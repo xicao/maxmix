@@ -20,6 +20,8 @@ import {
   faSortUp,
   faSortDown,
 } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(
@@ -38,6 +40,7 @@ library.add(
   faCaretUp,
   faUpload,
   faSortUp,
-  faSortDown
+  faSortDown,
+  faInstagram
 );
 Vue.component("vue-fontawesome", FontAwesomeIcon);

@@ -22,7 +22,7 @@
               Australia. We are focus on gifts and homewares for different ages.
               If you’re looking to buy homewares, gifts, souvenirs, and
               novelties that are affordable and good quality <br />
-              —— we can help.
+              <b>—— we can help.</b>
             </p>
           </div>
         </div>

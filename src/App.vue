@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <section class="brand">
+    <section class="brand shrink0">
       <img src="@/assets/brand.png" alt="logo" />
     </section>
-    <b-navbar>
+    <b-navbar class="shrink0">
       <template slot="end">
         <b-navbar-item
           tag="router-link"
@@ -29,20 +29,52 @@
         </b-navbar-item>
       </template>
     </b-navbar>
-    <router-view />
-    <footer class="footer">
+    <router-view class="grow1" />
+    <footer class="footer shrink0">
       <div class="content has-text-centered">
         &copy; MAXMIX {{ new Date().getFullYear() }}
+        <a href="https://www.instagram.com/maxmix_home_gifts/" target="_blank">
+          <vue-fontawesome :icon="['fab', 'instagram']" />
+        </a>
       </div>
     </footer>
   </div>
 </template>
 
 <style lang="scss">
-$brand-primary: "#EA4C55";
+$brand-primary: #ea4c55;
 
 #app {
-  min-height: 100vh;
+  a {
+    color: $brand-primary;
+
+    &.navbar-item {
+      color: #4a4a4a;
+    }
+  }
+
+  a.navbar-item:focus,
+  a.navbar-item:focus-within,
+  a.navbar-item:hover,
+  a.navbar-item.is-active,
+  .navbar-link:focus,
+  .navbar-link:focus-within,
+  .navbar-link:hover,
+  .navbar-link.is-active {
+    color: $brand-primary;
+  }
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .shrink0 {
+    flex-shrink: 0;
+  }
+
+  .grow1 {
+    flex-grow: 1;
+  }
 
   .brand {
     text-align: center;
@@ -67,7 +99,7 @@ $brand-primary: "#EA4C55";
   }
 
   h1 {
-    border-top: 5px solid #ea4c55;
+    border-top: 5px solid $brand-primary;
     display: inline-block;
     line-height: 1.5;
   }
@@ -75,6 +107,16 @@ $brand-primary: "#EA4C55";
   .footer {
     padding: 0.5rem;
     margin: 0.5rem;
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        margin-left: 10px;
+        color: $brand-primary;
+      }
+    }
   }
 }
 </style>

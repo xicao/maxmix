@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="locations">
     <section class="hero has-text-centered">
       <div class="hero-body">
         <div class="container">
@@ -40,7 +40,6 @@
                 style="display: flex; justify-content: space-between"
               >
                 <span>{{ location.address }}</span>
-                <a :href="`tel:${location.phone}`">{{ location.phone }}</a>
               </div>
             </div>
           </b-collapse>
@@ -64,17 +63,18 @@ export default {
         {
           title: "Arndale Shopping Centre",
           address: "9/470 Torrens Rd, Kilkenny SA 5009",
-          phone: "(08) 8244 7000",
+        },
+        {
+          title: "Elizabeth Shopping Centre",
+          address: "Shop S141 Elizabeth S/C 50 Elizabeth Way Elizabeth SA 5112",
         },
         {
           title: "Hallett Cove Shopping Centre",
           address: "246 Lonsdale Rd, Hallett Cove SA 5158",
-          phone: "0452 662 599",
         },
         {
-          title: "Westfield Marion",
+          title: "Westfield Marion Shopping Centre",
           address: "267 Diagonal Rd, Oaklands Park SA 5046",
-          phone: "(08) 8358 0003",
         },
       ];
     },
