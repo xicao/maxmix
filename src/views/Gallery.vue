@@ -21,7 +21,7 @@
             <div class="card-image">
               <figure class="image">
                 <a href="#" @click.prevent="showImageModel(image.image)">
-                  <img :src="image.image" alt="Image" />
+                  <img loading="lazy" :src="image.image" alt="Image" />
                 </a>
               </figure>
             </div>
@@ -57,28 +57,64 @@ export default {
     images() {
       return [
         {
-          image: this.getImgUrl(0),
+          image: this.getImgUrl("image0", "jpeg"),
         },
         {
-          image: this.getImgUrl(1),
+          image: this.getImgUrl("image1", "jpeg"),
         },
         {
-          image: this.getImgUrl(2),
+          image: this.getImgUrl("image2", "jpeg"),
         },
         {
-          image: this.getImgUrl(3),
+          image: this.getImgUrl("image3", "jpeg"),
         },
         {
-          image: this.getImgUrl(4),
+          image: this.getImgUrl("image4", "jpeg"),
         },
         {
-          image: this.getImgUrl(5),
+          image: this.getImgUrl("image5", "jpeg"),
         },
         {
-          image: this.getImgUrl(6),
+          image: this.getImgUrl("image6", "jpeg"),
         },
         {
-          image: this.getImgUrl(7),
+          image: this.getImgUrl("image7", "jpeg"),
+        },
+        {
+          image: this.getImgUrl("IMG_2987", "JPG"),
+        },
+        {
+          image: this.getImgUrl("IMG_2988", "JPG"),
+        },
+        {
+          image: this.getImgUrl("IMG_2989", "JPG"),
+        },
+        {
+          image: this.getImgUrl("IMG_2991", "JPG"),
+        },
+        {
+          image: this.getImgUrl("IMG_2993", "JPG"),
+        },
+        {
+          image: this.getImgUrl("IMG_2996", "JPG"),
+        },
+        {
+          image: this.getImgUrl("IMG_2999", "JPG"),
+        },
+        {
+          image: this.getImgUrl("IMG_3001", "JPG"),
+        },
+        {
+          image: this.getImgUrl("IMG_3002", "JPG"),
+        },
+        {
+          image: this.getImgUrl("IMG_3004", "JPG"),
+        },
+        {
+          image: this.getImgUrl("IMG_3006", "JPG"),
+        },
+        {
+          image: this.getImgUrl("IMG_3008", "JPG"),
         },
       ];
     },

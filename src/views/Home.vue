@@ -1,14 +1,22 @@
 <template>
   <div class="home">
-    <b-carousel :arrow="carousel.arrow">
-      <b-carousel-item v-for="(carousel, i) in carousel.items" :key="i">
-        <section class="hero">
-          <span class="image">
-            <img :src="carousel.image" />
-          </span>
-        </section>
-      </b-carousel-item>
-    </b-carousel>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-multiline is-centered">
+          <div class="column is-8 has-vertically-aligned-content">
+            <b-carousel :arrow="carousel.arrow">
+              <b-carousel-item v-for="(carousel, i) in carousel.items" :key="i">
+                <section class="hero">
+                  <span class="image">
+                    <img loading="lazy" :src="carousel.image" />
+                  </span>
+                </section>
+              </b-carousel-item>
+            </b-carousel>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section">
       <div class="container">
@@ -45,16 +53,16 @@ export default {
         arrow: true,
         items: [
           {
-            image: this.getImgUrl(0),
+            image: this.getImgUrl("image3"),
           },
           {
-            image: this.getImgUrl(1),
+            image: this.getImgUrl("IMG_3006", "JPG"),
           },
           {
-            image: this.getImgUrl(2),
+            image: this.getImgUrl("IMG_2996", "JPG"),
           },
           {
-            image: this.getImgUrl(3),
+            image: this.getImgUrl("IMG_3002", "JPG"),
           },
         ],
       };

@@ -3,8 +3,8 @@ export default {
     path: () => process.env.BASE_URL,
   },
   methods: {
-    getImgUrl(value) {
-      return `${this.path}assets/image${value}.jpeg`;
+    getImgUrl(name, type = "jpeg") {
+      return `${this.path}assets/${name}.${type}`;
     },
   },
 };
