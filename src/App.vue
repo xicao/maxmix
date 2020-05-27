@@ -31,8 +31,8 @@
     </b-navbar>
     <router-view class="grow1" />
     <footer class="footer shrink0">
-      <div class="content has-text-centered">
-        &copy; MAXMIX {{ new Date().getFullYear() }}
+      <div class="content has-text-centered has-text-weight-bold">
+        &copy; {{ new Date().getFullYear() }} maxmix
         <a href="https://www.instagram.com/maxmix_home_gifts/" target="_blank">
           <vue-fontawesome :icon="['fab', 'instagram']" />
         </a>

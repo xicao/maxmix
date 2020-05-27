@@ -18,7 +18,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section about">
       <div class="container">
         <div class="column is-12 has-text-centered">
           <h1 class="title section-title is-uppercase">About Us</h1>
@@ -83,6 +83,10 @@ export default {
         object-fit: cover;
       }
     }
+  }
+
+  .about {
+    margin-bottom: 3rem;
   }
 }
 </style>
