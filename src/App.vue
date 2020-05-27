@@ -53,6 +53,19 @@ $brand-primary: #ea4c55;
     }
   }
 
+  .carousel .carousel-indicator .indicator-item .indicator-style {
+    border: 1px solid $brand-primary;
+  }
+
+  .carousel .carousel-indicator .indicator-item.is-active .indicator-style,
+  .carousel .carousel-indicator .indicator-item .indicator-style:hover {
+    background: $brand-primary;
+  }
+
+  .carousel-arrow .icon {
+    color: $brand-primary;
+  }
+
   a.navbar-item:focus,
   a.navbar-item:focus-within,
   a.navbar-item:hover,

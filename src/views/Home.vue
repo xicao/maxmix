@@ -8,7 +8,7 @@
               <b-carousel-item v-for="(carousel, i) in carousel.items" :key="i">
                 <section class="hero">
                   <span class="image">
-                    <img loading="lazy" :src="carousel.image" />
+                    <img :src="carousel.image" />
                   </span>
                 </section>
               </b-carousel-item>
@@ -53,16 +53,19 @@ export default {
         arrow: true,
         items: [
           {
-            image: this.getImgUrl("image3"),
+            image: this.getImgUrl("image0"),
           },
           {
-            image: this.getImgUrl("IMG_3006", "JPG"),
+            image: this.getImgUrl("image6"),
           },
           {
             image: this.getImgUrl("IMG_2996", "JPG"),
           },
           {
-            image: this.getImgUrl("IMG_3002", "JPG"),
+            image: this.getImgUrl("IMG_2993", "JPG"),
+          },
+          {
+            image: this.getImgUrl("IMG_3004", "JPG"),
           },
         ],
       };
