@@ -62,11 +62,11 @@ export default {
       return [
         {
           title: "Arndale Shopping Centre",
-          address: "9/470 Torrens Rd, Kilkenny SA 5009",
+          address: "470 Torrens Rd, Kilkenny SA 5009",
         },
         {
           title: "Elizabeth Shopping Centre",
-          address: "Shop S141 Elizabeth S/C 50 Elizabeth Way Elizabeth SA 5112",
+          address: "50 Elizabeth Way Elizabeth SA 5112",
         },
         {
           title: "Hallett Cove Shopping Centre",

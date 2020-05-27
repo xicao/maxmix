@@ -63,49 +63,19 @@ export default {
           image: this.getImgUrl("image1", "jpeg"),
         },
         {
-          image: this.getImgUrl("image2", "jpeg"),
-        },
-        {
           image: this.getImgUrl("image3", "jpeg"),
         },
         {
           image: this.getImgUrl("image4", "jpeg"),
         },
         {
-          image: this.getImgUrl("image5", "jpeg"),
-        },
-        {
           image: this.getImgUrl("image6", "jpeg"),
-        },
-        {
-          image: this.getImgUrl("image7", "jpeg"),
-        },
-        {
-          image: this.getImgUrl("IMG_2987", "JPG"),
-        },
-        {
-          image: this.getImgUrl("IMG_2988", "JPG"),
-        },
-        {
-          image: this.getImgUrl("IMG_2989", "JPG"),
-        },
-        {
-          image: this.getImgUrl("IMG_2991", "JPG"),
         },
         {
           image: this.getImgUrl("IMG_2993", "JPG"),
         },
         {
           image: this.getImgUrl("IMG_2996", "JPG"),
-        },
-        {
-          image: this.getImgUrl("IMG_2999", "JPG"),
-        },
-        {
-          image: this.getImgUrl("IMG_3001", "JPG"),
-        },
-        {
-          image: this.getImgUrl("IMG_3002", "JPG"),
         },
         {
           image: this.getImgUrl("IMG_3004", "JPG"),
